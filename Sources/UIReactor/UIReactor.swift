@@ -23,7 +23,7 @@ public class UIReactor {
         return button
     }
     
-    public class func fuseTxtField(withPlaceholder: String, imageName: String) -> UITextField {
+    public class func fuseTxtField(withPlaceholder placeholder: String, imageName: String) -> UITextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.layer.cornerRadius = 18
