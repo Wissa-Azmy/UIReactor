@@ -16,16 +16,22 @@ public class UITile: UIView {
     let descriptionLbl = UILabel()
     var iconImgView = UIImageView()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        layoutView()
+        if #available(iOS 9.0, *) {
+            layoutView()
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @available(iOS 9.0, *)
     func layoutView() {
         // set the shadow of the view's layer
         layer.backgroundColor = UIColor.clear.cgColor

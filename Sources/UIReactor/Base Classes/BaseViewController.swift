@@ -10,12 +10,12 @@ import UIKit
 
 public class ReactorController: UIViewController {
     
-    override func loadView() {
+    override public func loadView() {
         view = UIView()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

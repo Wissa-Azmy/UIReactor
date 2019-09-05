@@ -35,11 +35,11 @@ public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableVie
     }
     
     // MARK: - TableView DataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
         let item = items[indexPath.row]
         cell.selectionStyle = .none
@@ -49,29 +49,29 @@ public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableVie
     }
     
     // MARK: - TableView Delegate Methods
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = items[indexPath.row]
         selectHandler(item)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.contentView.layer.masksToBounds = true
         
         let radius = cell.contentView.layer.cornerRadius
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: radius).cgPath
     }
     
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cell  = tableView.cellForRow(at: indexPath)
         cell!.contentView.backgroundColor = .lightGray
     }
 
-    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         let cell  = tableView.cellForRow(at: indexPath)
 
         UIView.animate(withDuration: 0.2) {
