@@ -1,3 +1,3 @@
 # UIReactor
 
-A description of this package.
+Elegant swift-based UIKit reactor for those who prefer bulding UI Components in code.
