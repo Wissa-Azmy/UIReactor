@@ -15,7 +15,7 @@ public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableVie
     var configure: (Cell, T) -> Void
     var selectHandler: (T) -> Void
     
-    init(items: [T], frame: CGRect, configure: @escaping (Cell, T) -> Void, selectHandler: @escaping (T) -> Void) {
+    public init(items: [T], frame: CGRect, configure: @escaping (Cell, T) -> Void, selectHandler: @escaping (T) -> Void) {
         self.items = items
         self.configure = configure
         self.selectHandler = selectHandler

@@ -11,7 +11,7 @@ import UIKit
 
 public class UIReactor {
     // MARK: - UI Components setup
-    class func fuseBtn(btnType: UIButton.ButtonType, title : String, titleColor : UIColor, cornerRadius : CGFloat, font : CGFloat, backgroundColor : UIColor) -> UIButton {
+    public class func fuseBtn(btnType: UIButton.ButtonType, title : String, titleColor : UIColor, cornerRadius : CGFloat, font : CGFloat, backgroundColor : UIColor) -> UIButton {
         let button = UIButton(type: btnType)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(title, for: .normal)
@@ -23,7 +23,7 @@ public class UIReactor {
         return button
     }
     
-    class func fuseTxtField(placeholder : String, imageName : String) -> UITextField {
+    public class func fuseTxtField(placeholder : String, imageName : String) -> UITextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.layer.cornerRadius = 18
@@ -37,7 +37,7 @@ public class UIReactor {
         return textField
     }
     
-    class func fuseLabel(text: String = "", txtColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 12)) -> UILabel {
+    public class func fuseLabel(text: String = "", txtColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 12)) -> UILabel {
         let label = UILabel()
         label.font = font
         label.textColor =  txtColor
@@ -52,11 +52,11 @@ public class UIReactor {
 // MARK: - Navigation Methods
 extension UIReactor {
     // REMOVE VIEW CONTROLLER FROM THE NAVIGATION STACK OF The Sender
-    static func popViewCotroller(sender: UIViewController) {
+    public static func popViewCotroller(sender: UIViewController) {
         sender.navigationController?.popViewController(animated: true)
     }
     
-    @objc static func segueToController(
+    @objc public static func segueToController(
         withName controllerName: String,
         from sender: UIViewController
     ) {
@@ -68,7 +68,7 @@ extension UIReactor {
 
 // MARK: - Alerts, ActionSheets and ActivityIndicator
 extension UIReactor {
-    static func showActivityIndicator(on view: UIView, color: UIColor = .gray) -> UIActivityIndicatorView {
+    public static func showActivityIndicator(on view: UIView, color: UIColor = .gray) -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
         activityIndicator.center = view.center
@@ -80,7 +80,7 @@ extension UIReactor {
         return activityIndicator
     }
     
-    static func presentRequiredFieldAlert(on sender: UIViewController, localizedTitle: String, localizedMsg: String) {
+    public static func presentRequiredFieldAlert(on sender: UIViewController, localizedTitle: String, localizedMsg: String) {
         let alert = UIAlertController(
             title: NSLocalizedString(localizedTitle, comment: ""),
             message: NSLocalizedString(localizedMsg, comment: ""),
@@ -95,7 +95,7 @@ extension UIReactor {
         sender.present(alert, animated: true, completion: nil)
     }
     
-    static func presentRequiredAlert(on sender: UIViewController, localizedTitle: String, localizedMsg: String) {
+    public static func presentRequiredAlert(on sender: UIViewController, localizedTitle: String, localizedMsg: String) {
         let alert = UIAlertController(
             title: NSLocalizedString(localizedTitle, comment: ""),
             message: NSLocalizedString(localizedMsg, comment: ""),
@@ -110,7 +110,7 @@ extension UIReactor {
         sender.present(alert, animated: true, completion: nil)
     }
     
-    static func presentInternetConnectionAlert(on sender: UIViewController, indicator: UIActivityIndicatorView? = nil) {
+    public static func presentInternetConnectionAlert(on sender: UIViewController, indicator: UIActivityIndicatorView? = nil) {
         let dataLoadingAlert = UIAlertController(
             title: NSLocalizedString("requiredInternetAlertTitle", comment: ""),
             message: NSLocalizedString("requiredInternetAlertMsg", comment: ""),
