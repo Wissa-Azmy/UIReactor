@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UIReactor {
+public class UIReactor {
     // MARK: - UI Components setup
     class func fuseBtn(btnType: UIButton.ButtonType, title : String, titleColor : UIColor, cornerRadius : CGFloat, font : CGFloat, backgroundColor : UIColor) -> UIButton {
         let button = UIButton(type: btnType)

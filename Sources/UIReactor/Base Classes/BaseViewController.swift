@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+public class ReactorController: UIViewController {
     
     override func loadView() {
         view = UIView()

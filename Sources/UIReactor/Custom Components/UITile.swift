@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UITile: UIView {
+public class UITile: UIView {
     
     let containerView = UIView()
     let headerLbl = UILabel()

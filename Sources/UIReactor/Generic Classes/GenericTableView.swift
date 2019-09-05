@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableViewDataSource, UITableViewDelegate {
+public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     var items: [T]
     var configure: (Cell, T) -> Void
