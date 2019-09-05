@@ -11,7 +11,7 @@ import UIKit
 
 public class UIReactor {
     // MARK: - UI Components setup
-    public class func fuseBtn(btnType: UIButton.ButtonType, title : String, titleColor : UIColor, cornerRadius : CGFloat, font : CGFloat, backgroundColor : UIColor) -> UIButton {
+    public class func fuseBtn(ofType btnType: UIButton.ButtonType, title : String, titleColor : UIColor, cornerRadius : CGFloat, font : CGFloat, backgroundColor : UIColor) -> UIButton {
         let button = UIButton(type: btnType)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(title, for: .normal)
@@ -23,7 +23,7 @@ public class UIReactor {
         return button
     }
     
-    public class func fuseTxtField(placeholder : String, imageName : String) -> UITextField {
+    public class func fuseTxtField(withPlaceholder: String, imageName: String) -> UITextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.layer.cornerRadius = 18
@@ -37,7 +37,7 @@ public class UIReactor {
         return textField
     }
     
-    public class func fuseLabel(text: String = "", txtColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 12)) -> UILabel {
+    public class func fuseLabel(withText text: String = "", txtColor: UIColor = .black, font: UIFont = UIFont.systemFont(ofSize: 12)) -> UILabel {
         let label = UILabel()
         label.font = font
         label.textColor =  txtColor
