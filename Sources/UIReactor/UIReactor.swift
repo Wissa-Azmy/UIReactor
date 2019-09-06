@@ -11,29 +11,29 @@ import UIKit
 
 public class UIReactor {
     // MARK: - UI Components setup
-    public class func fuseBtn(ofType btnType: UIButton.ButtonType, title : String, titleColor : UIColor, cornerRadius : CGFloat, font : CGFloat, backgroundColor : UIColor) -> UIButton {
+    public class func fuseBtn(ofType btnType: UIButton.ButtonType, title: String, titleColor: UIColor, cornerRadius: CGFloat, fontSize: CGFloat = 15, backgroundColor: UIColor = .white) -> UIButton {
         let button = UIButton(type: btnType)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(title, for: .normal)
         button.setTitleColor(titleColor, for: .normal)
         button.titleLabel?.textAlignment = .center
-        button.titleLabel?.font = UIFont(name: "AraJozoor-Regular", size: font)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         button.layer.cornerRadius = cornerRadius
         button.backgroundColor = backgroundColor
         return button
     }
     
-    public class func fuseTxtField(withPlaceholder placeholder: String, imageName: String) -> UITextField {
+    public class func fuseTxtField(withPlaceholder placeholder: String, fontSize: CGFloat = 14, iconName: String) -> UITextField {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.layer.cornerRadius = 18
         textField.layer.borderColor = #colorLiteral(red: 0.9128934145, green: 0.9176079035, blue: 0.930550158, alpha: 1)
         textField.layer.borderWidth = 1
         textField.placeholder = placeholder
-        textField.font = UIFont(name: "AraJozoor-Regular", size: 14)
+        textField.font = UIFont.systemFont(ofSize: fontSize)
         textField.textAlignment = .natural
         textField.clipsToBounds = true
-        textField.addPaddingLeftIcon(UIImage(named: imageName)!, padding: 20)
+        textField.addPaddingLeftIcon(UIImage(named: iconName)!, padding: 20)
         return textField
     }
     

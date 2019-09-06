@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func addSubViews(_ views: UIView...) {
+    public func addSubViews(_ views: UIView...) {
         for view in views {
             self.addSubview(view)
         }
     }
     
-    func addShadow() {
+    public func addShadow() {
         self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.08
