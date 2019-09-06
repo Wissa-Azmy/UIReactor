@@ -35,6 +35,9 @@ public class UIReactor {
         textField.clipsToBounds = true
         if let image = UIImage(named: iconName) {
             textField.addPaddingLeftIcon(image, padding: 20)
+        } else {
+            textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            textField.leftViewMode = .always
         }
         return textField
     }
