@@ -67,7 +67,7 @@ public class UITile: UIView {
         iconImgView.translatesAutoresizingMaskIntoConstraints = false
         iconImgView.contentMode = .scaleAspectFit
         
-        addSubViews(containerView, headerLbl, titleLbl, descriptionLbl, iconImgView)
+        addSubviews(containerView, headerLbl, titleLbl, descriptionLbl, iconImgView)
         
         // add constraints
         NSLayoutConstraint.activate([
