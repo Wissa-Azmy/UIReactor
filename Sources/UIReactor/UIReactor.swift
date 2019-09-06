@@ -33,7 +33,9 @@ public class UIReactor {
         textField.font = UIFont.systemFont(ofSize: fontSize)
         textField.textAlignment = .natural
         textField.clipsToBounds = true
-        textField.addPaddingLeftIcon(UIImage(named: iconName)!, padding: 20)
+        if let image = UIImage(named: iconName) {
+            textField.addPaddingLeftIcon(image, padding: 20)
+        }
         return textField
     }
     
