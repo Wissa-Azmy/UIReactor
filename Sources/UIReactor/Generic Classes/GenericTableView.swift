@@ -12,6 +12,7 @@ import UIKit
 public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     var items: [T]
+    public var heightForRow: CGFloat = 100
     var configure: (Cell, T) -> Void
     var selectHandler: (T) -> Void
     
@@ -58,7 +59,7 @@ public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableVie
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return heightForRow
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
