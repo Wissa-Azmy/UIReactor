@@ -12,14 +12,15 @@ import UIKit
 public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     var items: [T]
-    public var heightForRow: CGFloat = 100
+    var heightForRow: CGFloat
     var configure: (Cell, T) -> Void
     var selectHandler: (T) -> Void
     
-    public init(items: [T], frame: CGRect, configure: @escaping (Cell, T) -> Void, selectHandler: @escaping (T) -> Void) {
+    public init(items: [T], frame: CGRect, rowHeight:CGFloat = 100, configure: @escaping (Cell, T) -> Void, selectHandler: @escaping (T) -> Void) {
         self.items = items
         self.configure = configure
         self.selectHandler = selectHandler
+        heightForRow = rowHeight
         super.init(frame: frame, style: .plain)
         self.dataSource = self
         self.delegate = self
