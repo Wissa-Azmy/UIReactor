@@ -21,7 +21,7 @@ open class TileTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setupCell(){
+    public func setupCell(){
         backgroundColor = .clear // very important
         layer.masksToBounds = false
         layer.shadowOpacity = 0.08
