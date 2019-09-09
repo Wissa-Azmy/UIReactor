@@ -23,7 +23,9 @@ public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableVie
         self.dataSource = self
         self.delegate = self
         self.register(Cell.self, forCellReuseIdentifier: "Cell")
-        
+        estimatedRowHeight = 80
+        separatorColor = UIColor.clear
+        backgroundColor = UIColor.clear
         self.translatesAutoresizingMaskIntoConstraints = false
         self.rowHeight = UITableView.automaticDimension
         // Allows a cell shadow and content to overflow outside the table and cell bounds
