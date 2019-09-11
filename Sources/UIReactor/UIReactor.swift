@@ -52,6 +52,18 @@ public class UIReactor {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }
+    
+    public class func fuseImageView(withImageNamed imageName: String = "") -> UIImageView {
+        let imageView = UIImageView()
+        if let image = UIImage(named: imageName) {
+            imageView.image = image
+        }
+        
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return imageView
+    }
 }
 
 // MARK: - Navigation Methods
