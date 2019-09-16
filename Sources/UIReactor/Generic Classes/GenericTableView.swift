@@ -11,7 +11,11 @@ import UIKit
 
 public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
-    var items: [T]
+    var items: [T] {
+        didSet {
+            self.reloadData()
+        }
+    }
     var heightForRow: CGFloat
     var configure: (Cell, T) -> Void
     var selectHandler: (T) -> Void
@@ -32,6 +36,10 @@ public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableVie
         self.rowHeight = UITableView.automaticDimension
         // Allows a cell shadow and content to overflow outside the table and cell bounds
         self.clipsToBounds = false
+    }
+    
+    func reload(withDataOf data: [T]) {
+        self.items = data
     }
     
     required init?(coder: NSCoder) {
