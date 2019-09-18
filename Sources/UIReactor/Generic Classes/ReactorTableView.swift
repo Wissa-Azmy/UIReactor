@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class GenericTableView<T, Cell: UITableViewCell>: UITableView, UITableViewDataSource, UITableViewDelegate {
+public class ReactorTableView<T, Cell: UITableViewCell>: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     var items: [T] {
         didSet {

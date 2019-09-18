@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class UITile: UIView {
+public class ReactorTile: UIView {
     
-    let containerView = UIView()
-    let headerLbl = UILabel()
-    let titleLbl = UILabel()
-    let descriptionLbl = UILabel()
-    var iconImgView = UIImageView()
+    public let containerView = UIView()
+    public let headerLbl = UILabel()
+    public let titleLbl = UILabel()
+    public let descriptionLbl = UILabel()
+    public var iconImgView = UIImageView()
     
     
     override init(frame: CGRect) {
