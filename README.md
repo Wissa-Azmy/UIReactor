@@ -20,7 +20,7 @@ Elegant swift-based UIKit reactor for those who prefer bulding UI Components in 
 ```
 MIT License
 
-Copyright (c) 2017 Juanpe Catalán
+Copyright (c) 2019 Wissa Michael
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
