@@ -29,7 +29,7 @@ open class ReactorTableViewTileCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         let margins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         contentView.frame = contentView.frame.inset(by: margins)
@@ -40,7 +40,7 @@ open class ReactorTableViewTileCell: UITableViewCell {
         setupCell()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
