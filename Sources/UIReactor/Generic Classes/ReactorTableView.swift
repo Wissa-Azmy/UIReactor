@@ -38,7 +38,7 @@ public class ReactorTableView<T, Cell: UITableViewCell>: UITableView, UITableVie
         self.clipsToBounds = false
     }
     
-    func reload(withDataOf data: [T]) {
+    public func reload(withDataOf data: [T]) {
         self.items = data
     }
     
